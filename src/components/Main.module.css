@@ -1,0 +1,125 @@
+main{
+    height: calc(100vh - 100px);
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 2px var(--ca);
+}
+
+
+.area1{
+    background-image: url(img/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 45vw;
+    height: 100%;
+}
+
+.area2{
+    width: 55vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--ca);
+    background-color: rgba(0, 0, 0, 0.850);
+}
+
+.titulo1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4%;
+    width: 100%;
+    padding: 15px;
+}
+
+.titulo1 p{
+    font-size: 17px;
+    overflow-y: hidden;
+}
+    
+
+.info2{
+    display: flex;
+    height: 96%;
+    width: 90%;
+    padding: 30px;
+    padding-top: 0px;
+    padding-right: 40px;
+    flex-direction: column;
+    align-items:flex-end;
+}
+
+.info2 p{
+    padding-bottom: 20px;
+    font-size: 17px;
+}
+
+
+.btn2 {
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: var(--ca);
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 15px;
+    width: 17px;
+    height: 17px;
+}
+
+.btn2:hover{
+    transform: scale(1.17);
+    animation: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 1100px){
+    .titulo1 p{
+        font-size: calc(1.1vw + 5px);
+    }
+    .info2 p {
+        font-size: calc(1.1vw + 5px);
+    }
+}
+
+@media screen and (max-width: 900px){
+    .titulo1 p{
+        font-size: calc(1.3vw + 5px);
+    }
+    .info2 p {
+        font-size: calc(1.3vw + 5px);
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (max-width: 800px){
+    main{
+        flex-direction: column;
+        height: calc(200vh - 100px);
+    }
+    section{
+        flex-direction:column-reverse;
+        height: calc(200vh - 100px);
+    }
+    .area1, .area2{
+        width: 100vw;
+    }
+    .info1{
+        padding-left: 20px;
+    }
+    .titulo1 p{
+        font-size: calc(2vw + 5px);
+    }
+    .info2 p{
+        font-size: calc(2vw + 5px);
+    }
+}
+
+@media screen and (max-width: 500px){
+    main, section{
+        height: calc(100vh);
+   }
+   .btn2{
+        height: 20px;
+        width: 20px;
+   }
+}
